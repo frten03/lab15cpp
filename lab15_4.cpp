@@ -19,3 +19,34 @@ int main(){
 }
 
 //Do not modify source code above this line
+void shuffle(int &a,int &b,int &c,int &d){
+	int key = rand()%4 ;
+	int keepa = a;
+	int keepb = b;
+	int keepc = c;
+	int keepd = d;
+	if(key==0){
+		a = keepb;
+		b = keepc;
+		c = keepd;
+		d = keepa;
+	}
+	if(key==1){
+		a = keepc ;
+		b = keepd ;
+		c = keepa ;
+		d = keepb ;
+	}
+	if(key==2){
+		a = keepd ;
+		b = keepa ;
+		c = keepb ;
+		d = keepc ;
+	}
+	if(key==3){
+		a = keepc ;
+		b = keepa ;
+		c = keepd ;
+		d = keepb ;
+	}
+}
